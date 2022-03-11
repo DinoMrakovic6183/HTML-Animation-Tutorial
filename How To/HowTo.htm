@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+	<html>
+		<head>
+			<title>
+				How To Make Animations
+			</title>
+				<link rel = "shortcut icon" type = "image/x-icon" href = "" />
+			<style>
+				html {
+					max-width:100%;
+				}
+				h1 {
+					text-align:center;
+					font-size:50px;
+				}
+				h2 {
+					margin-left:100px;
+					font-size:30px;
+				}
+				p {
+					font-size:25px;
+					margin-left:60px;
+				}
+
+				div.kazotsky {
+					width:25%;
+					height:25%;
+					margin:10px;
+
+				}
+
+				div.captionK {
+					font-size:25px;
+					margin-left:15px;
+					color:black;
+				}
+
+				div.hi {
+					background-color:black;
+					width:100px;
+					height:100px;
+					position: relative;
+					animation-name: example;
+					animation-duration: 5s;
+					animation-iteration-count: infinite;
+				}
+				
+				@keyframes example {
+					0%   {left:0px; top:0px;}
+					25%  {left:500px; top:0px;}
+					50%  {left:500px; top:100px;}
+					75%  {left:0px; top:100px;}
+					100% {left:0px; top:0px;}
+				}
+			</style>
+		</head>
+		<body>
+			<h1>
+				How To Make Animations With CSS
+			</h1>
+				<hr>
+			<p>
+				First, you have to have a class for the animation to be under, preferably a div class.
+			</p>
+			<h2>
+				Example:
+			</h2>
+			<p>
+				&lt; div class = "(insert class name)" &gt;&lt; /div &gt;
+			</p>
+				<hr>
+			<p>
+				After that, you have to open the class in your style section or in your CSS file
+			</p>
+			<h2>
+				Example:
+			</h2>
+			<p>
+				(class name) { <br>
+					animation-... <br>
+				}
+			</p>
+				<hr>
+			<p>
+				Once you made your class, you can start on the animation part. (you can use width and height to make a square as well)
+			</p>
+			<h2>
+				Example:
+			</h2>
+			<p>
+				(class name) { <br>
+					position: relative; <br>
+					animation-duration:#s; this is the length of the animation <br>
+					animation-delay:#s (or 0); this is the delay of the start of the animation <br>
+					animation-iteration-count:# (or "infinite"); this is how many times the animation repeats <br>
+					animation-name:(insert name of animation); this is the name of the animation used in the next example <br>
+				}
+			</p>
+				<hr>
+			<p>
+				After this is finished, you need to create an @keyframes line with your animation name
+			</p>
+			<h2>
+				Example:
+			</h2>
+			<p>
+				@keyframes (name of animation) { <br>
+					... <br>
+				}
+			</p>
+				<hr>
+			<p>
+				Now that you have your @keyframe line opened, there are two ways of making the animation (a to and from, and a % movement)<br>
+					<br>
+				The first way is to put the code <br><br>"from {(direction):#px (typically 0);}" and "to {(direction):#px;}"
+					<br><br>
+				The second way is to put the code <br><br>"0%{left:0px; top:0px;}<br> 25%{left:#px; top:0px;}<br> 50%{left:#px; top:#px;}<br> 75%{left:0px; top:#px;}<br> 100%{left:0px; top:0px;}"
+			</p>
+				<hr>
+			<div class = "hi">
+			</div> <br><br><br><br><br><br>
+				<hr>
+			<h2>
+				My HTML:
+			</h2>
+			<p>
+				&lt; div class = "hi" &gt; &lt; /div &gt;
+			</p>
+				<hr>
+			<h2>
+				My CSS:
+			</h2>
+			<p>
+				div.hi { <br>
+					background-color:red;<br>
+					width:100px;<br>
+					height:100px;<br>
+					position: relative;<br>
+					animation-name: example;<br>
+					animation-duration: 5s;<br>
+					animation-iteration-count: infinite;<br>
+				}<br>
+				<br><br>
+				@keyframes example {<br>
+					0%   {left:0px; top:0px;}<br>
+					25%  {left:500px; top:0px;}<br>
+					50%  {left:500px; top:100px;}<br>
+					75%  {left:0px; top:100px;}<br>
+					100% {left:0px; top:0px;}<br>
+				}<br>
+			</p>
+<hr>
+<div class="kazotsky"><img src="images/kazotsky.gif"></div>
+<div class="kazotsky"><img src="images/minecraf.gif"></div>
+<div class="captionK">Or you can just insert GIF's like this :/</div>
+		</body>
+	</html>
+	
+	<!-- %lt; ... &gt; -->
